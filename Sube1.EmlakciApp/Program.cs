@@ -21,6 +21,7 @@ namespace Sube1.EmlakciApp
             for (int i = 0; i < evler.Length; i++)
             {
                 Console.WriteLine(evler[i].EvBilgileri());
+
                 Console.WriteLine("\n------------------\n");
             }
         }
