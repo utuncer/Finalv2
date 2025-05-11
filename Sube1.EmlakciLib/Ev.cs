@@ -2,38 +2,15 @@
 
 namespace Sube1.EmlakciLib
 {
-    public class Ev
+    public abstract class Ev
     {
         public static int Sayac { get; private set; }
 
-        public Ev()
-        {
-            Sayac++;
-        }
-        public Ev(int odasayisi, int katno, double alan, string semt = "Kızılay")
-        {
-            this.Odasayisi = odasayisi;
-            this.Katno = katno;
-            this.Semt = semt;
-            this.Alan = alan;
-            Sayac++;
-        }
-
-        public Ev(int odasayisi, int katno, double alan)
-        {
-            this.Odasayisi = odasayisi;
-            this.Katno = katno;
-            this.Semt = "Kızılay";
-            this.Alan = alan;
-            Sayac++;
-        }
-
-
-        private string semt;
         public string Buyukluk { get; private set; }
         public int Katno { get; set; }
+        private string semt;
         public string Semt { get => semt; set => semt = value.ToUpper(); }
-        private int odasayisi;      
+        private int odasayisi;
         public int Odasayisi { get => odasayisi; set => odasayisi = Math.Abs(value); }
         private double alan;
         public double Alan
@@ -62,9 +39,27 @@ namespace Sube1.EmlakciLib
             }
         }
 
-        public virtual string EvBilgileri()
+        public Ev()
         {
-            return $"Oda Sayısı:{this.Odasayisi}\nKat no:{this.Katno}\nAlan:{this.Alan}\nSemt:{this.Semt}\nBüyüklük:{this.Buyukluk}";
+            Sayac++;
         }
+        public Ev(int odasayisi, int katno, double alan, string semt = "Kızılay")
+        {
+            this.Odasayisi = odasayisi;
+            this.Katno = katno;
+            this.Semt = semt;
+            this.Alan = alan;
+            Sayac++;
+        }
+
+        public Ev(int odasayisi, int katno, double alan)
+        {
+            this.Odasayisi = odasayisi;
+            this.Katno = katno;
+            this.Semt = "Kızılay";
+            this.Alan = alan;
+            Sayac++;
+        }
+        public abstract string EvBilgileri();
     }
 }

@@ -11,10 +11,10 @@ namespace Sube1.EmlakciLib
 
         }
 
-        public KiralikEv(double kira, double depozito, int odasayisi, string semt, int katno, double alan):base(odasayisi,katno,alan,semt)
+        public KiralikEv(double kira, double depozito, int odasayisi, string semt, int katno, double alan) : base(odasayisi, katno, alan, semt)
         {
             this.Kira = kira;
-            this.Depozito = depozito;           
+            this.Depozito = depozito;
         }
 
         public double Kira { get; set; }
@@ -22,7 +22,14 @@ namespace Sube1.EmlakciLib
 
         public override string EvBilgileri()
         {
-            return $"{base.EvBilgileri()}\nKira:{this.Kira}\nDepozito:{this.Depozito}";
+            return
+                $"Oda Sayısı:{this.Odasayisi}\n" +
+                $"Kat no:{this.Katno}\n" +
+                $"Alan:{this.Alan}\n" +
+                $"Semt:{this.Semt}\n" +
+                $"Büyüklük:{this.Buyukluk}\n" +
+                $"Kira:{this.Kira}\n" +
+                $"Depozito:{this.Depozito}";
         }
     }
 }

@@ -20,7 +20,13 @@ namespace Sube1.EmlakciLib
 
         public override string EvBilgileri()
         {
-            return $"{base.EvBilgileri()}\nSatış Fiyat:{this.Satisfiyat}";
+            return 
+                $"Oda Sayısı:{this.Odasayisi}\n" +
+                $"Kat no:{this.Katno}\n" +
+                $"Alan:{this.Alan}\n" +
+                $"Semt:{this.Semt}\n" +
+                $"Büyüklük:{this.Buyukluk}\n" +
+                $"Satış Fiyat:{this.Satisfiyat}";
         }
     }
 }

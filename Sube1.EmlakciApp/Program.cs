@@ -16,12 +16,12 @@ namespace Sube1.EmlakciApp
             var se1 = new SatilikEv(700, 2, "Satılık Ev", 120, 70);
             var se2 = new SatilikEv(900, 4, "Satılık Ev", 140, 80);
 
-            Ev[] evler = { ke, ke1, ke2, se, se1, se2 };
+            Ev[] evler = { ke, ke1, ke2, se, se1, se2};
 
             for (int i = 0; i < evler.Length; i++)
             {
                 Console.WriteLine(evler[i].EvBilgileri());
-                Console.WriteLine("------------------");
+                Console.WriteLine("\n------------------\n");
             }
         }
     }
