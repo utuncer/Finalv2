@@ -19,10 +19,6 @@ namespace Sube1.EmlakciLib
 
         public double Kira { get; set; }
         public double Depozito { get; set; }
-        public override string TemelBilgiler()
-        {
-            return $"LÜKS KONUT\n{base.TemelBilgiler()}\nÖzel Güvenlik Mevcut";
-        }
         public override string OzelBilgi()
         {
             return $"Kira:{this.Kira}\n" +
