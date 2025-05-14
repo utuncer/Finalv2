@@ -18,15 +18,10 @@ namespace Sube1.EmlakciLib
 
         public double Satisfiyat { get; set; }
 
-        public override string EvBilgileri()
+        public override string OzelBilgi()
         {
-            return 
-                $"Oda Sayısı:{this.Odasayisi}\n" +
-                $"Kat no:{this.Katno}\n" +
-                $"Alan:{this.Alan}\n" +
-                $"Semt:{this.Semt}\n" +
-                $"Büyüklük:{this.Buyukluk}\n" +
-                $"Satış Fiyat:{this.Satisfiyat}";
+            return $"Satış Fiyat:{this.Satisfiyat}";
         }
+
     }
 }

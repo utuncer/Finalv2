@@ -60,6 +60,18 @@ namespace Sube1.EmlakciLib
             this.Alan = alan;
             Sayac++;
         }
-        public abstract string EvBilgileri();
+        public abstract string OzelBilgi();
+        public virtual string TemelBilgiler()
+        {
+            return $"Oda Sayısı:{this.Odasayisi}\n" +
+                   $"Kat no:{this.Katno}\n" +
+                   $"Alan:{this.Alan}\n" +
+                   $"Semt:{this.Semt}\n" +
+                   $"Büyüklük:{this.Buyukluk}";
+        }
+        public string EvBilgileri()
+        {
+            return $"{TemelBilgiler()}\n{OzelBilgi()}";
+        }
     }
 }

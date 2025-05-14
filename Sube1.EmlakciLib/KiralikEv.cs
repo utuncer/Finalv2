@@ -19,17 +19,14 @@ namespace Sube1.EmlakciLib
 
         public double Kira { get; set; }
         public double Depozito { get; set; }
-
-        public override string EvBilgileri()
+        public override string TemelBilgiler()
         {
-            return
-                $"Oda Sayısı:{this.Odasayisi}\n" +
-                $"Kat no:{this.Katno}\n" +
-                $"Alan:{this.Alan}\n" +
-                $"Semt:{this.Semt}\n" +
-                $"Büyüklük:{this.Buyukluk}\n" +
-                $"Kira:{this.Kira}\n" +
-                $"Depozito:{this.Depozito}";
+            return $"LÜKS KONUT\n{base.TemelBilgiler()}\nÖzel Güvenlik Mevcut";
+        }
+        public override string OzelBilgi()
+        {
+            return $"Kira:{this.Kira}\n" +
+                   $"Depozito:{this.Depozito}";
         }
     }
 }
